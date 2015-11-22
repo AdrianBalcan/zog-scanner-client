@@ -1,0 +1,9 @@
+{
+     "name": "ZOG-Scanner",
+     "description": "ZOG Scanner System",
+     "author": "Adrian Balcan",
+     "version": "0.0.1",
+     "dependencies": {
+        "socket.io-client": ""
+     }
+}

@@ -2,7 +2,7 @@ var io = require('socket.io-client');
 var os = require("os");
 process.stdin.resume();
 process.stdin.setEncoding('utf8');
-client = io.connect('http://localhost:8080');
+client = io.connect('http://server:8080');
 var data = '';
 
 client.on('connect',function() {

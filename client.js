@@ -6,15 +6,15 @@ client = io.connect('http://server:8080');
 var data = '';
 
 client.on('connect',function() {
-    console.log('Connected');
-    client.emit('adduser','os.hostname()');
+    console.log('Connected as '+ os.hostname());
+    client.emit('adduser',os.hostname());
 }); 
 client.on('disconnect',function() {
     console.log('Disconnected');
 }); 
 process.stdin.on('data', function (text) {
     data = text.replace(/\n|\r/g, "");
-    console.log('CID: ', data);
+    console.log('('+new Date()+') CID: ', data);
     if (/^\d+\n$/.test(text)){
       client.emit('cid',data);
     } else {
